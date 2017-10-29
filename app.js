@@ -1,15 +1,12 @@
 (function(window, document){
     const greetings = [
-        "Howdy, partner!",
         "BOO!",
         "Always be yourself! ... Unless you can be Batman, then, always be Batman",
-        "Hi!",
         "I come in peace!",
         "Put down the churros",
         "‘Sup?",
         "Hello, my name is Wilbi ^_^",
         "I am Batman.",
-        "Yo!",
         "Whaddup",
         "Hi! Long time no see!"
     ];
