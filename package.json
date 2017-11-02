@@ -1,0 +1,12 @@
+{
+  "name": "wmartin81.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "@types/node": "^8.0.47",
+    "@types/webpack": "^3.0.14",
+    "awesome-typescript-loader": "^3.3.0",
+    "source-map-loader": "^0.2.3",
+    "typescript": "^2.6.1"
+  }
+}
