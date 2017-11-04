@@ -15,7 +15,7 @@
   },
   "scripts": {
     "build": "webpack --config webpack.prod.ts",
-    "dev-build": "webpack --config webpack.dev.ts"
+    "watch": "webpack --progress --watch --config webpack.dev.ts"
   },
   "dependencies": {
     "@types/react": "^16.0.19",
