@@ -20,7 +20,10 @@
   "dependencies": {
     "@types/react": "^16.0.19",
     "@types/react-dom": "^16.0.2",
+    "@types/react-router": "^4.0.16",
+    "@types/react-router-dom": "^4.2.0",
     "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react-dom": "^16.0.0",
+    "react-router-dom": "^4.2.2"
   }
 }
