@@ -1,14 +1,14 @@
 import * as React from 'react';
-import NavButton from './nav-button';
+import { Link } from 'react-router-dom';
 
 const NavMenu = (props) => ( 
     <div className="nav">
         <div className="profile-image"></div>
-        <NavButton title="Home" iconClassName="home-icon"/>
-        <NavButton title="About Me" iconClassName="about-me-icon"/>
-        <NavButton title="Resume" iconClassName="resume-icon"/>
-        <NavButton title="Repo" iconClassName="repo-icon"/>
-        <NavButton title="Contact" iconClassName="contact-icon"/>
+        <Link to="/" className="nav-button home-button">Home</Link>
+        <Link to="/aboutme" className="nav-button aboutme-button">About Me</Link>
+        <Link to="/resume" className="nav-button resume-button">Resume</Link>
+        <a href="https://github.com/wmartin81" className="nav-button repo-button">Repo</a>
+        <a href="https://www.linkedin.com/in/wilberm" className="nav-button contact-button">Contact</a>
     </div>
 )
 
