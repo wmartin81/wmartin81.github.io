@@ -5,9 +5,11 @@ export interface NavButtonProps{
     iconClassName:string
 }
 
-export const NavButton = (props:NavButtonProps) => (
+const NavButton = (props:NavButtonProps) => (
     <div className="navigation-button">
         <div className={"icon " + props.iconClassName}></div>
         <span className="title">{props.title}</span>
     </div>
 )
+
+export default NavButton;

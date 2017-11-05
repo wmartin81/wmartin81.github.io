@@ -965,8 +965,8 @@ var react_router_dom_1 = __webpack_require__(45);
 var nav_menu_1 = __webpack_require__(60);
 var content_1 = __webpack_require__(61);
 var App = function (props) { return (React.createElement("div", null,
-    React.createElement(nav_menu_1.NavMenu, null),
-    React.createElement(content_1.Content, null))); };
+    React.createElement(nav_menu_1.default, null),
+    React.createElement(content_1.default, null))); };
 ReactDOM.render(React.createElement(react_router_dom_1.BrowserRouter, null,
     React.createElement(App, null)), document.getElementById('root'));
 
@@ -21181,9 +21181,10 @@ module.exports = function() {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(6);
-exports.NavButton = function (props) { return (React.createElement("div", { className: "navigation-button" },
+var NavButton = function (props) { return (React.createElement("div", { className: "navigation-button" },
     React.createElement("div", { className: "icon " + props.iconClassName }),
     React.createElement("span", { className: "title" }, props.title))); };
+exports.default = NavButton;
 
 
 /***/ }),
@@ -22872,13 +22873,14 @@ NavLink.defaultProps = {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(6);
 var nav_button_1 = __webpack_require__(35);
-exports.NavMenu = function (props) { return (React.createElement("div", { className: "nav" },
+var NavMenu = function (props) { return (React.createElement("div", { className: "nav" },
     React.createElement("div", { className: "profile-image" }),
-    React.createElement(nav_button_1.NavButton, { title: "Home", iconClassName: "home-icon" }),
-    React.createElement(nav_button_1.NavButton, { title: "About Me", iconClassName: "about-me-icon" }),
-    React.createElement(nav_button_1.NavButton, { title: "Resume", iconClassName: "resume-icon" }),
-    React.createElement(nav_button_1.NavButton, { title: "Repo", iconClassName: "repo-icon" }),
-    React.createElement(nav_button_1.NavButton, { title: "Contact", iconClassName: "contact-icon" }))); };
+    React.createElement(nav_button_1.default, { title: "Home", iconClassName: "home-icon" }),
+    React.createElement(nav_button_1.default, { title: "About Me", iconClassName: "about-me-icon" }),
+    React.createElement(nav_button_1.default, { title: "Resume", iconClassName: "resume-icon" }),
+    React.createElement(nav_button_1.default, { title: "Repo", iconClassName: "repo-icon" }),
+    React.createElement(nav_button_1.default, { title: "Contact", iconClassName: "contact-icon" }))); };
+exports.default = NavMenu;
 
 
 /***/ }),
@@ -22893,10 +22895,11 @@ var react_router_dom_1 = __webpack_require__(45);
 var home_1 = __webpack_require__(62);
 var aboutme_1 = __webpack_require__(63);
 var resume_1 = __webpack_require__(64);
-exports.Content = function (props) { return (React.createElement("div", null,
-    React.createElement(react_router_dom_1.Route, { exact: true, path: "/", component: home_1.Home }),
-    React.createElement(react_router_dom_1.Route, { path: "/aboutme", component: aboutme_1.AboutMe }),
-    React.createElement(react_router_dom_1.Route, { path: "/resume", component: resume_1.Resume }))); };
+var Content = function (props) { return (React.createElement(react_router_dom_1.Switch, null,
+    React.createElement(react_router_dom_1.Route, { exact: true, path: "/", component: home_1.default }),
+    React.createElement(react_router_dom_1.Route, { path: "/aboutme", component: aboutme_1.default }),
+    React.createElement(react_router_dom_1.Route, { path: "/resume", component: resume_1.default }))); };
+exports.default = Content;
 
 
 /***/ }),
@@ -22907,8 +22910,9 @@ exports.Content = function (props) { return (React.createElement("div", null,
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(6);
-exports.Home = function (props) { return (React.createElement("div", null,
+var Home = function (props) { return (React.createElement("div", null,
     React.createElement("h1", null, "Hello from Home!"))); };
+exports.default = Home;
 
 
 /***/ }),
@@ -22919,8 +22923,9 @@ exports.Home = function (props) { return (React.createElement("div", null,
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(6);
-exports.AboutMe = function (props) { return (React.createElement("div", null,
+var AboutMe = function (props) { return (React.createElement("div", null,
     React.createElement("h1", null, "Hello from About Me!"))); };
+exports.default = AboutMe;
 
 
 /***/ }),
@@ -22931,8 +22936,9 @@ exports.AboutMe = function (props) { return (React.createElement("div", null,
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(6);
-exports.Resume = function (props) { return (React.createElement("div", null,
+var Resume = function (props) { return (React.createElement("div", null,
     React.createElement("h1", null, "Hello from Resume!"))); };
+exports.default = Resume;
 
 
 /***/ }),

@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { NavButton } from './nav-button';
+import NavButton from './nav-button';
 
-export const NavMenu = (props) => ( 
+const NavMenu = (props) => ( 
     <div className="nav">
         <div className="profile-image"></div>
         <NavButton title="Home" iconClassName="home-icon"/>
@@ -11,3 +11,5 @@ export const NavMenu = (props) => (
         <NavButton title="Contact" iconClassName="contact-icon"/>
     </div>
 )
+
+export default NavMenu;
