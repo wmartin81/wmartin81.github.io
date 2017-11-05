@@ -1885,7 +1885,7 @@ var content_1 = __webpack_require__(59);
 var App = function (props) { return (React.createElement("div", null,
     React.createElement(nav_menu_1.default, null),
     React.createElement(content_1.default, null))); };
-ReactDOM.render(React.createElement(react_router_dom_1.BrowserRouter, null,
+ReactDOM.render(React.createElement(react_router_dom_1.MemoryRouter, null,
     React.createElement(App, null)), document.getElementById('root'));
 
 
