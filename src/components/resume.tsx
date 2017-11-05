@@ -1,9 +1,7 @@
 import * as React from 'react';
 
-export function Resume(props){
-    return(
-        <div>
-            <h1>Hello from Resume!</h1>
-        </div>
-    );
-}
+export const Resume = (props) => (
+    <div>
+        <h1>Hello from Resume!</h1>
+    </div>
+)

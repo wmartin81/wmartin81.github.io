@@ -11,11 +11,13 @@
     "typescript": "^2.6.1",
     "uglifyjs-webpack-plugin": "^1.0.1",
     "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4",
     "webpack-merge": "^4.1.1"
   },
   "scripts": {
     "build": "webpack --config webpack.prod.ts",
-    "watch": "webpack --progress --watch --config webpack.dev.ts"
+    "watch": "webpack --progress --watch --config webpack.dev.ts",
+    "start": "webpack-dev-server --open --config webpack.dev.ts"
   },
   "dependencies": {
     "@types/react": "^16.0.19",

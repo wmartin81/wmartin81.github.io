@@ -8,7 +8,12 @@ const config: webpack.Configuration = {
         rules:[
             { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }            
         ]
-    }
+    },
+    devServer: {
+        contentBase: "./",
+        compress: true,
+        port: 9000
+      }
 }
 
 export default merge(common, config);
