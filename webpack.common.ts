@@ -1,5 +1,6 @@
 import * as webpack from 'webpack';
 import * as path from 'path';
+import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 const config: webpack.Configuration = {
     entry:'./src/app.tsx',
@@ -10,9 +11,19 @@ const config: webpack.Configuration = {
     },
     module:{
         rules:[
-            { test: /\.tsx?$/, loader: "awesome-typescript-loader" }         
+            { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
+            {test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                  fallback: "style-loader",
+                  use: "css-loader?minimize"
+                })
+            },
+            { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=8192' }         
         ]
     },
+    plugins:[
+        new ExtractTextPlugin('bundle.css')
+    ],
     externals:{
         'react': "React",
         'react-dom': 'ReactDOM'
