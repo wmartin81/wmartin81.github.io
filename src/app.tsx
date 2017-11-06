@@ -5,7 +5,7 @@ import NavMenu from './components/nav-menu';
 import Content from './components/content';
 
 const App = (props) => (
-    <div>
+    <div id="app">
         <NavMenu/>
         <Content/>
     </div>

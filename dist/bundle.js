@@ -1882,7 +1882,7 @@ var ReactDOM = __webpack_require__(27);
 var react_router_dom_1 = __webpack_require__(8);
 var nav_menu_1 = __webpack_require__(58);
 var content_1 = __webpack_require__(59);
-var App = function (props) { return (React.createElement("div", null,
+var App = function (props) { return (React.createElement("div", { id: "app" },
     React.createElement(nav_menu_1.default, null),
     React.createElement(content_1.default, null))); };
 ReactDOM.render(React.createElement(react_router_dom_1.MemoryRouter, null,
@@ -5736,10 +5736,11 @@ var react_router_dom_1 = __webpack_require__(8);
 var home_1 = __webpack_require__(60);
 var aboutme_1 = __webpack_require__(61);
 var resume_1 = __webpack_require__(62);
-var Content = function (props) { return (React.createElement(react_router_dom_1.Switch, null,
-    React.createElement(react_router_dom_1.Route, { exact: true, path: "/", component: home_1.default }),
-    React.createElement(react_router_dom_1.Route, { path: "/aboutme", component: aboutme_1.default }),
-    React.createElement(react_router_dom_1.Route, { path: "/resume", component: resume_1.default }))); };
+var Content = function (props) { return (React.createElement("div", { className: "content" },
+    React.createElement(react_router_dom_1.Switch, null,
+        React.createElement(react_router_dom_1.Route, { exact: true, path: "/", component: home_1.default }),
+        React.createElement(react_router_dom_1.Route, { path: "/aboutme", component: aboutme_1.default }),
+        React.createElement(react_router_dom_1.Route, { path: "/resume", component: resume_1.default })))); };
 exports.default = Content;
 
 

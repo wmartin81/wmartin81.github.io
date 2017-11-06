@@ -5,11 +5,13 @@ import AboutMe from './aboutme';
 import Resume from './resume';
 
 const Content = (props) => (
-    <Switch>
-        <Route exact path="/" component={Home}/>
-        <Route path="/aboutme" component={AboutMe}/>
-        <Route path="/resume" component={Resume}/>
-    </Switch>
+    <div className="content">
+        <Switch>
+            <Route exact path="/" component={Home}/>
+            <Route path="/aboutme" component={AboutMe}/>
+            <Route path="/resume" component={Resume}/>
+        </Switch>
+    </div>
 )
 
 export default Content;

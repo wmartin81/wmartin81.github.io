@@ -1,12 +1,76 @@
+html, body, #root, #app{
+    height: 100%;
+}
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    background-color: whitesmoke;
 }
-
+#app{
+    display: flex;
+}
+div.nav{
+    background-color: #33373d;
+    width:100px
+}
 a.nav-button{
     display: block;
     text-decoration: none;
     text-align: center;
-    color: whitesmoke;
-    background-color: #33373d;
+    color: white;
+    opacity: .5;
+    background-repeat: no-repeat;
+    background-position: center 10px;
+    background-size: 32px;
+    height: 80px;
+    line-height: 7;
+    border-left: 3px solid transparent;
+}
+a.nav-button:hover{
+    opacity: 1;
+}
+.profile-image{
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url('images/small_profile.png');
+    height: 100px;
+}
+.home-button{
+    background-image: url('images/home.png');
+}
+.home-button:hover{
+    background-color: green;
+    border-color: #00d200;
+}
+.aboutme-button{
+    background-image: url('images/aboutme.png');
+}
+.aboutme-button:hover{
+    background-color: purple; 
+    border-color: magenta; 
+}
+.resume-button{
+    background-image: url('images/resume.png');
+}
+.resume-button:hover{
+    background-color: #df0000cc;
+    border-color: red;
+}
+.repo-button{
+    background-image: url('images/github.png');
+}
+.repo-button:hover{
+    background-color: black;
+    border-color: lightgray;
+}
+.contact-button{
+    background-image: url('images/linkedin.png')
+}
+.contact-button:hover{
+    background-color: #0077b5;
+    border-color: #00a8ff;
+}
+div.content{
+    flex-grow: 1;
+    padding: 10px;
 }
