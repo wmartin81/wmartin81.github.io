@@ -53,7 +53,7 @@ a.nav-button:hover{
     background-image: url('images/resume.png');
 }
 .resume-button:hover{
-    background-color: #df0000cc;
+    background-color: #a30000;
     border-color: red;
 }
 .repo-button{
@@ -73,4 +73,20 @@ a.nav-button:hover{
 div.content{
     flex-grow: 1;
     padding: 10px;
+}
+
+@media (max-width: 991px) {  
+    div.nav{
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        width: 100%;
+    }
+    a.nav-button{
+        flex-grow: 1;
+        height: 50px;
+    }
+    .profile-image{
+        height: 0;
+    }
 }
