@@ -77,7 +77,7 @@ div.content{
 
 @media (max-width: 991px) {  
     div.nav{
-        position: absolute;
+        position: fixed;
         bottom: 0;
         display: flex;
         width: 100%;
