@@ -2,7 +2,9 @@ import * as React from 'react';
 
 const Home = (props) => (
     <div>
-        <h1>Hello from Home!</h1>
+        <p>Hi, my name is Wilber.</p>
+        <p>I'm a software developer.</p>
+        <p>Welcome to my personal website.</p>
     </div>
 )
 
