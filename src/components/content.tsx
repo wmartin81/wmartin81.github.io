@@ -6,11 +6,16 @@ import Resume from './resume';
 
 const Content = (props) => (
     <div className="content">
-        <Switch>
-            <Route exact path="/" component={Home}/>
-            <Route path="/aboutme" component={AboutMe}/>
-            <Route path="/resume" component={Resume}/>
-        </Switch>
+        <div className="content-header">
+            <div className="profile-image"></div>
+        </div>
+        <div className="route-render-area">
+            <Switch>
+                <Route exact path="/" component={Home}/>
+                <Route path="/aboutme" component={AboutMe}/>
+                <Route path="/resume" component={Resume}/>
+            </Switch>
+        </div>
     </div>
 )
 

@@ -5744,10 +5744,13 @@ var home_1 = __webpack_require__(61);
 var aboutme_1 = __webpack_require__(62);
 var resume_1 = __webpack_require__(63);
 var Content = function (props) { return (React.createElement("div", { className: "content" },
-    React.createElement(react_router_dom_1.Switch, null,
-        React.createElement(react_router_dom_1.Route, { exact: true, path: "/", component: home_1.default }),
-        React.createElement(react_router_dom_1.Route, { path: "/aboutme", component: aboutme_1.default }),
-        React.createElement(react_router_dom_1.Route, { path: "/resume", component: resume_1.default })))); };
+    React.createElement("div", { className: "content-header" },
+        React.createElement("div", { className: "profile-image" })),
+    React.createElement("div", { className: "route-render-area" },
+        React.createElement(react_router_dom_1.Switch, null,
+            React.createElement(react_router_dom_1.Route, { exact: true, path: "/", component: home_1.default }),
+            React.createElement(react_router_dom_1.Route, { path: "/aboutme", component: aboutme_1.default }),
+            React.createElement(react_router_dom_1.Route, { path: "/resume", component: resume_1.default }))))); };
 exports.default = Content;
 
 
@@ -5774,18 +5777,25 @@ exports.default = Home;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
-var AboutMe = function (props) { return (React.createElement("div", { className: "aboutme" },
-    React.createElement("div", { className: "aboutme-profile-image" }),
-    React.createElement("div", { className: "aboutme-content" },
-        React.createElement("div", null,
-            React.createElement("label", null, "What I do"),
-            React.createElement("p", null, "Have worked with many tools across different industries facing many problems. I like to learn about software, new paradigms, and optimization techniques, but what drives me the most is solving tough problems.")),
-        React.createElement("div", null,
-            React.createElement("label", null, "Achievements"),
-            React.createElement("p", null, "Designed project architecture, database structures, mid tier APIs, front end javascript code, and accompanying internal tools, for varying companies, from chemical manufacturing and ad tech, to business intelligence products.")),
-        React.createElement("div", null,
-            React.createElement("label", null, "Skills"),
-            React.createElement("p", null, "Mostly C# and pure JavaScript but with a sprinkle of Angular, React, TypeScript, Node, Webpack, Web Services, .NET Core, SQL"))))); };
+var snippets = [
+    {
+        title: "What I Do",
+        abstract: "Have worked with many tools across different industries facing many problems. I like to learn about software, new paradigms, and optimization techniques, but what drives me the most is solving tough problems."
+    },
+    {
+        title: "Achievements",
+        abstract: "Designed project architecture, database structures, mid tier APIs, front end javascript code, and accompanying internal tools, for varying companies, from chemical manufacturing and ad tech, to business intelligence products."
+    },
+    {
+        title: "Skills",
+        abstract: "Mostly C# and pure JavaScript, but with a sprinkle of Angular, React, TypeScript, Node, Webpack, Web Services, .NET Core, and SQL."
+    }
+];
+var AboutMe = function (props) { return (React.createElement("div", { className: "aboutme" }, snippets.map(function (sn) { return (React.createElement("div", { className: "snippet" },
+    React.createElement("div", null,
+        React.createElement("label", { className: "title" }, sn.title)),
+    React.createElement("div", null,
+        React.createElement("p", { className: "abstract" }, sn.abstract)))); }))); };
 exports.default = AboutMe;
 
 
@@ -5797,8 +5807,30 @@ exports.default = AboutMe;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
-var Resume = function (props) { return (React.createElement("div", null,
-    React.createElement("h1", null, "Hello from Resume!"))); };
+var experiences = [
+    {
+        company: "Infragistics - Web Controls/UX/Data Analytics",
+        title: "Software Developer",
+        responsibilities: "Research/design/develop new features across all tiers for Infragistics' ReportPlus Server, an enterprise-level server application designed for storing, viewing and sharing business analytics. Migrate application front-end from JavaScript & JQuery, to Angular & TypeScript."
+    },
+    {
+        company: "Princing Engine Inc. - Digital Marketing",
+        title: "Software Engineer",
+        responsibilities: "Developed/maintained/deployed digital marketing SaaS platform that would be hosted in AWS EC2 instance. Upgraded and maintained support systems and APIs. Led overhaul of MVC application for Wix marketplace."
+    },
+    {
+        company: "Ungerer & Company - Chemicals Manufacturer",
+        title: "Jr. Software Developer",
+        responsibilities: "Supported, maintained, and extended Expense System, PTO Application, Formula Inventory Tracking and Labeling, ERP system built on proprietary DML, SSRS Reports and other internal business applications."
+    }
+];
+var Resume = function (props) { return (React.createElement("div", { className: "resume" }, experiences.map(function (ex) { return (React.createElement("div", { className: "experience" },
+    React.createElement("div", null,
+        React.createElement("label", { className: "company" }, ex.company)),
+    React.createElement("div", null,
+        React.createElement("label", { className: "title" }, ex.title)),
+    React.createElement("div", null,
+        React.createElement("p", { className: "responsibilities" }, ex.responsibilities)))); }))); };
 exports.default = Resume;
 
 
