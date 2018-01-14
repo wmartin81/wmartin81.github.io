@@ -12,7 +12,7 @@ const experiences:Experience[] = [
         company:"Infragistics",
         specialty: "Web Controls/UX/Data Analytics",
         title:"Software Developer",
-        responsibilities:"Research/design/develop new features across all tiers for Infragistics' ReportPlus Server, an enterprise-level server application designed for storing, viewing and sharing business analytics. Migrate application front-end from JavaScript & JQuery, to Angular & TypeScript."
+        responsibilities:"Research/design/develop new features across all tiers for Infragistics' ReportPlus Server, an enterprise-level server application designed for storing, viewing and sharing business analytics. Migrate application front-end from JavaScript & JQuery to Angular & TypeScript front-end. Implement OAuth based data-sources. Add recent and favorite dashboard cross-platform sync functionality. Package and deploy release build to remote servers."
     },
     {
         company:"Princing Engine Inc.",
@@ -24,7 +24,7 @@ const experiences:Experience[] = [
         company:"Ungerer & Company",
         specialty:"Chemicals Manufacturer",
         title:"Jr. Software Developer",
-        responsibilities:"Supported, maintained, and extended Expense System, PTO Application, Formula Inventory Tracking and Labeling, ERP system built on proprietary DML, SSRS Reports and other internal business applications."
+        responsibilities:"Supported, maintained, and extended, Expense System, PTO Application, Formula Inventory Tracking and Labeling, ERP system built on proprietary DML, SSRS Reports and other internal business applications."
     }
 ]
 
