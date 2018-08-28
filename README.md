@@ -1,2 +1,2 @@
 # wilbi.github.io
-Personal page to display my public projects and where people can find out more about me ^_^
+This is a simple personal page built with React, TypeScript, and Webpack along with a dash of css flexbox and media queries. Browser through the ```\src```, if you would like to see how I glued things together, or go to my site if you would like to find out more about me ^_^
