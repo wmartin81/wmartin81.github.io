@@ -1,0 +1,128 @@
+html, body, #root, #app{
+    height: 100%;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color:white;
+    color:gray;
+}
+#app{
+    display: flex;
+}
+.nav{
+    background-color: #33373d;
+    width:100px;
+    flex-shrink: 0;
+}
+.nav-button{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    opacity: .5;
+    background-repeat: no-repeat;
+    background-position: center 10px;
+    background-size: 32px;
+    height: 80px;
+    line-height: 7;
+    border-left: 3px solid transparent;
+}
+.nav-button:hover{
+    opacity: 1;
+}
+.profile-image{
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url('images/small_profile.jpg');
+    height: 100px;
+    width: 100px;
+}
+.home-button{
+    background-image: url('images/home.png');
+}
+.home-button:hover{
+    background-color: green;
+    border-color: #00d200;
+}
+.aboutme-button{
+    background-image: url('images/aboutme.png');
+}
+.aboutme-button:hover{
+    background-color: purple; 
+    border-color: magenta; 
+}
+.resume-button{
+    background-image: url('images/resume.png');
+}
+.resume-button:hover{
+    background-color: #a30000;
+    border-color: red;
+}
+.repo-button{
+    background-image: url('images/github.png');
+}
+.repo-button:hover{
+    background-color: black;
+    border-color: lightgray;
+}
+.contact-button{
+    background-image: url('images/linkedin.png')
+}
+.contact-button:hover{
+    background-color: #0077b5;
+    border-color: #00a8ff;
+}
+.content{
+    flex-grow: 1;
+    padding: 10px;
+    overflow: auto;
+}
+.content-header{
+    display: none;
+}
+.content-header .profile-image{
+    margin: auto;
+    border: 5px solid white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px #bbbbbb;
+}
+.route-render-area{
+    padding: 20px 20px 0 20px;
+}
+.aboutme{
+    max-width: 500px;
+}
+.aboutme .title{
+    font-weight: bold;
+}
+.resume {
+    max-width: 500px;
+}
+.resume .company{
+    font-weight: bold;
+}
+@media (max-width: 991px) {  
+    #app{
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .nav{
+        display: flex;
+        width: 100%;
+        order:1;
+    }
+    .nav-button{
+        flex-grow: 1;
+        height: 50px;
+    }
+    .nav .profile-image{
+        display: none;
+    }
+    .content .content-header{
+        display: block;
+    }
+    .content .route-render-area{
+        height: 100%;
+    }
+}
