@@ -1,9 +1,8 @@
-name: Deploy Svelte to GitHub Pages
+name: Build and Deploy SvelteKit to GitHub Pages
 
 on:
   push:
-    branches:
-      - master  # or your default branch
+    branches: [master]  # or your default branch
 
 permissions:
   contents: read
@@ -11,11 +10,11 @@ permissions:
   id-token: write
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout source
         uses: actions/checkout@v4
 
       - name: Setup Node
@@ -26,12 +25,23 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Svelte project
+      - name: Build SvelteKit site
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build  # <- vite build output folder
+          path: build  # this is the adapter-static output folder
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
