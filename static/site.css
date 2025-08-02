@@ -59,19 +59,48 @@ body{
     background-color: #a30000;
     border-color: red;
 }
-.repo-button{
+.repo-button, .repo-image{
     background-image: url('images/github.png');
 }
 .repo-button:hover{
     background-color: black;
     border-color: lightgray;
 }
-.contact-button{
+.repo-image{
+	background-color: black;
+}
+.contact-button, .contact-image{
     background-image: url('images/linkedin.png')
 }
 .contact-button:hover{
     background-color: #0077b5;
     border-color: #00a8ff;
+}
+.contact-image{
+    background-color: #0077b5;
+}
+.link-item {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: inherit;
+}
+.link-image {
+	width: 50px; /* make it square */
+	height: 50px;
+	border-radius: 5px; /* optional rounded corners */
+	margin-right: 10px;
+    background-size:32px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.link{
+	color:gray;
+	font-weight:bold;
+    text-decoration:underline;
+}
+.link:hover{
+	color:black;
 }
 .content{
     flex-grow: 1;
